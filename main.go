@@ -13,7 +13,7 @@ import (
 
 //初始化系统,读取config.yaml里面的配置信息并进行赋值
 func init() {
-	viper.SetConfigName("config")
+	viper.SetConfigName(os.Args[1])
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
